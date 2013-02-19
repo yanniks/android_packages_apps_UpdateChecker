@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download">Download current version</string>
+    <string name="app_name">UpdateChecker</string>
+    <string name="version">Build 02/19/2013</string>
+    <string name="installed">Installed version: </string>
+    <string name="current">Current version: </string>
+</resources>

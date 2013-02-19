@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download">Aktuelle Version herunterladen</string>
+    <string name="installed">Installierte Version: </string>
+    <string name="current">Aktuelle Version: </string>
+</resources>
