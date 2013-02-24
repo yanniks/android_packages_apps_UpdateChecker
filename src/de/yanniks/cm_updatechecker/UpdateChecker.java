@@ -1,6 +1,6 @@
 package de.yanniks.cm_updatechecker;
 
-import de.yanniks.cm_updatechecker2.R;
+import de.yanniks.cm_updatechecker.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
