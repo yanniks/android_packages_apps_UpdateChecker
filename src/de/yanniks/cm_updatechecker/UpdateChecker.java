@@ -1,6 +1,6 @@
 package de.yanniks.cm_updatechecker;
 
-import de.yanniks.cm_updatechecker.R;
+import de.yanniks.cm_updatechecker2.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ public class UpdateChecker extends Activity {
         setContentView(R.layout.updatecheck);
     	mWebView = (WebView) findViewById(R.id.updatecheck);
     	mWebView.getSettings().setJavaScriptEnabled(true);
-    	mWebView.loadUrl("http://yanniks.de/current-cm10ace.html");
+    	mWebView.loadUrl("http://yanniks.de/cm/current-cm10ace.html");
     	mWebView.setWebViewClient(new LoginClient());
     }
 	public void download (final View view) {
