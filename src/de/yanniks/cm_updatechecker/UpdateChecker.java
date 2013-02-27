@@ -17,7 +17,7 @@ public class UpdateChecker extends Activity {
         setContentView(R.layout.updatecheck);
     	mWebView = (WebView) findViewById(R.id.updatecheck);
     	mWebView.getSettings().setJavaScriptEnabled(true);
-    	mWebView.loadUrl("http://yanniks.de/cm/current-cm10ace.html");
+    	mWebView.loadUrl("http://yanniks.de/roms/current-cm10ace.html");
     	mWebView.setWebViewClient(new LoginClient());
     }
 	public void download (final View view) {

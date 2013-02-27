@@ -13,6 +13,6 @@ public class downloadcurrent extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.downloadcurrent);
     	mWebView = (WebView) findViewById(R.id.downloadcurrent);
-    	mWebView.loadUrl("http://yanniks.de/cm/cm10-1-ace");
+    	mWebView.loadUrl("http://yanniks.de/roms/cm10-1-ace");
     }
 }
