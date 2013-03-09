@@ -2,7 +2,7 @@
 <resources>
     <string name="download">Download current version</string>
     <string name="app_name">UpdateChecker</string>
-    <string name="version">Build 03/04/2013</string>
+    <string name="version">Build 03/09/2013</string>
     <string name="installed">Installed version: </string>
     <string name="current">Current version: </string>
 </resources>
