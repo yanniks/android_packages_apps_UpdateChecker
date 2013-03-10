@@ -3,4 +3,5 @@
     <string name="download">Aktuelle Version herunterladen</string>
     <string name="installed">Installierte Version: </string>
     <string name="current">Aktuelle Version: </string>
+    <string name="version">Fehler beim Auslesen der Build</string>
 </resources>

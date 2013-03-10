@@ -11,8 +11,9 @@
         android:text="@string/installed" />
  
    <TextView
+       android:id="@+id/installedversion"
        android:layout_width="fill_parent"
-       android:layout_height="30dp"
+       android:layout_height="60dp"
        android:text="@string/version" />
 
     <TextView
@@ -27,10 +28,10 @@
        android:layout_height="wrap_content" />
 
    <Button
-       android:id="@+id/download"
-       android:layout_width="fill_parent"
+       android:id="@+id/button1"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:onClick="download"
+       android:onClick="downloadcurrent"
        android:text="@string/download" />
  
 </LinearLayout>
