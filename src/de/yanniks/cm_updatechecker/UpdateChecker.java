@@ -28,7 +28,7 @@ public class UpdateChecker extends Activity {
     	mWebView.getSettings().setJavaScriptEnabled(true);
     	mWebView.loadUrl("http://yanniks.de/roms/current-cm10ace.html");
     	mWebView.setWebViewClient(new LoginClient());
-        String input = "getprop |awk -F :  '/build.display.id/ { print $2 }'";
+        String input = "getprop |awk -F :  '/ro.cm.version/ { print $2 }'";
         execCommandLine(input, tv);}
 
         void execCommandLine(String command, TextView tv)
