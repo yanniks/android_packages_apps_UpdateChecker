@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.yanniks.cm_updatechecker"
-    android:versionCode="2"
-    android:versionName="1.0-2" >
+    android:versionCode="3"
+    android:versionName="1.0-3" >
 
     <uses-sdk
         android:minSdkVersion="17"
         android:targetSdkVersion="17" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 <uses-permission android:name="android.permission.ACCESS_SUPERUSER"></uses-permission>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -25,13 +22,20 @@
             android:hardwareAccelerated="true"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+    </intent-filter>
         </activity>
-        <activity android:name=".downloadcurrent" />
+        <activity 
+            android:name=".downloadcurrent" >
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="ace-updater" android:host="download" />
+    </intent-filter> </activity>
     </application>
 
 </manifest>
