@@ -5,5 +5,6 @@
     <string name="installedver">1.0-4</string>
     <string name="version">cannot read current build</string>
     <string name="installed">Installed version: </string>
+    <string name="refresh">Refresh</string>
     <string name="current">Current version: </string>
 </resources>
