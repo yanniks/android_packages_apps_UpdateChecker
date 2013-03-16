@@ -11,6 +11,9 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -25,7 +28,6 @@ public class UpdateChecker extends Activity {
         setContentView(R.layout.updatecheck);
         TextView tv = (TextView)findViewById(R.id.installedversion);
     	mWebView = (WebView) findViewById(R.id.updatecheck);
-    	mWebView.getSettings().setJavaScriptEnabled(true);
     	mWebView.loadUrl("http://yanniks.de/roms/current-cm101ace.html");
     	mWebView.setWebViewClient(new LoginClient());
         String input = "getprop |awk -F :  '/ro.cm.version/ { print $2 }'";
@@ -108,5 +110,20 @@ public class UpdateChecker extends Activity {
                 view.loadUrl(url);
                 return true;
             }
+        }
+        @Override
+        public boolean onCreateOptionsMenu (Menu menu) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.menu, menu);
+            return super.onCreateOptionsMenu(menu);
+        }  
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            if(item.getItemId() == R.id.item1){
+                mWebView.reload();
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
         }
     }
