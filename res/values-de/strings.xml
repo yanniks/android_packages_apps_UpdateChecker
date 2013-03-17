@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="download">Aktuelle Version herunterladen</string>
+    <string name="buildbotdb">Dropbox Ordner vom Buildbot öffnen (evtl. mit Fehlern)</string>
     <string name="installed">Installierte Version: </string>
     <string name="current">Aktuelle Version: </string>
     <string name="refresh">Aktualisieren</string>

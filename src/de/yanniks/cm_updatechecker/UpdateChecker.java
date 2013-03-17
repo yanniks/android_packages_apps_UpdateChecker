@@ -104,6 +104,9 @@ public class UpdateChecker extends Activity {
     	public void downloadcurrent (final View view) {
         	startActivity (new Intent (this,downloadcurrent.class));
     	}
+    	public void buildbotdb (final View view) {
+        	startActivity (new Intent (this,buildbotdb.class));
+    	}
         private class LoginClient extends WebViewClient {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {

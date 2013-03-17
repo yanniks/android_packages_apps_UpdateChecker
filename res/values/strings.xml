@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="download">Download current version</string>
+    <string name="buildbotdb">Open Dropbox Buildbot folder (maybe with errors)</string>
     <string name="app_name">UpdateChecker</string>
-    <string name="installedver">1.0-5</string>
+    <string name="installedver">1.0-6</string>
     <string name="version">cannot read current build</string>
     <string name="installed">Installed version: </string>
     <string name="refresh">Refresh</string>

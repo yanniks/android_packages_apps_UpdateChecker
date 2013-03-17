@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.yanniks.cm_updatechecker"
-    android:versionCode="5"
+    android:versionCode="6"
     android:versionName="@string/installedver" >
 
     <uses-sdk
@@ -37,6 +37,7 @@
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="ace-updater" android:host="download" />
     </intent-filter> </activity>
+    <activity android:name=".buildbotdb" />
     </application>
 
 </manifest>
