@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="download">Aktuelle Version herunterladen</string>
-    <string name="buildbotdb">Dropbox Ordner vom Buildbot öffnen (evtl. mit Fehlern)</string>
+    <string name="buildbotdb">Dropbox Ordner des Buildbots öffnen (evtl. mit Fehlern)</string>
     <string name="installed">Installierte Version: </string>
     <string name="current">Aktuelle Version: </string>
     <string name="refresh">Aktualisieren</string>
+    <string name="wait">Bitte warten...</string>
+    <string name="waittext">Sollte die Wartezeit länger als 10 Sekunden sein, prüfe bitte deine Netzwerkverbindung!</string>
     <string name="version">Fehler beim Auslesen der Build</string>
 </resources>
