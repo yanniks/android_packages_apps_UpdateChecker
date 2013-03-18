@@ -25,7 +25,7 @@
    <WebView
        android:id="@+id/updatecheck"
        android:layout_width="238dp"
-       android:layout_height="wrap_content" />
+       android:layout_height="60dp" />
    
     <TextView
         android:id="@+id/version"

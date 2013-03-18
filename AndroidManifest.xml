@@ -18,6 +18,7 @@
         <activity
             android:name="de.yanniks.cm_updatechecker.UpdateChecker"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:hardwareAccelerated="true"
             android:configChanges="orientation|keyboardHidden|screenSize"

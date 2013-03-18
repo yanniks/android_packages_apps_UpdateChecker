@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/downloadcurrent"
+    android:id="@+id/layoutfile" >
+    
+    <WebView
+        android:id="@+id/downloadcurrent"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
 
-/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="156dp"
+        android:gravity="center"
+        android:text="@string/wait"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/waittext"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>
