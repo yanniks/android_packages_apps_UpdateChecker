@@ -39,6 +39,7 @@
         <data android:scheme="ace-updater" android:host="download" />
     </intent-filter> </activity>
     <activity android:name=".buildbotdb" />
+    <activity android:name=".ROMs" android:label="JellyBelly-HD" />
     </application>
 
 </manifest>

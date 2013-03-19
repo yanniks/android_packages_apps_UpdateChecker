@@ -126,6 +126,10 @@ public class UpdateChecker extends Activity {
             if(item.getItemId() == R.id.item1){
                 mWebView.reload();
                 return true;
+                }
+            if(item.getItemId() == R.id.item2){
+            	startActivity (new Intent (this,ROMs.class));
+            	return true;
             }
             return super.onOptionsItemSelected(item);
         }
