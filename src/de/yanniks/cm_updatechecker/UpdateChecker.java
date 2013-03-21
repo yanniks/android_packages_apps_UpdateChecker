@@ -163,7 +163,7 @@ public class UpdateChecker extends Activity {
         public void onNotification(){
     		Utils.notificationReceived=false;
     		PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-    		WakeLock  wl = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
+    		WakeLock  wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TAG");
     		wl.acquire();
     		wl.release();
 
