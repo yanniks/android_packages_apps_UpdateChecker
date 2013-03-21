@@ -17,6 +17,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.content.DialogInterface;
+import android.net.Uri;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
+
+import de.yanniks.cm_updatechecker.Utils;
+import com.google.android.gcm.GCMRegistrar;
 import android.widget.TextView;
 
 public class UpdateChecker extends Activity {
@@ -26,6 +33,20 @@ public class UpdateChecker extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.updatecheck);
+        GCMRegistrar.checkDevice(this);
+		GCMRegistrar.checkManifest(this);
+		
+		final String regId = GCMRegistrar.getRegistrationId(this);
+		
+		if (regId.equals("")) {
+			GCMRegistrar.register(this, Utils.GCMSenderId);
+		} else {
+			Log.v("", "Already registered:  "+regId);
+		}
+        
+		if (Utils.notificationReceived) {
+			onNotification();
+		}
         TextView tv = (TextView)findViewById(R.id.installedversion);
     	mWebView = (WebView) findViewById(R.id.updatecheck);
     	mWebView.loadUrl("http://yanniks.de/roms/current-cm101ace.html");
@@ -133,4 +154,25 @@ public class UpdateChecker extends Activity {
             }
             return super.onOptionsItemSelected(item);
         }
+        @Override
+        protected void onDestroy() {
+            GCMRegistrar.onDestroy(this);
+            super.onDestroy();
+        }
+        
+        public void onNotification(){
+    		Utils.notificationReceived=false;
+    		PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
+    		WakeLock  wl = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
+    		wl.acquire();
+    		wl.release();
+
+    		AlertDialog.Builder mAlert=new AlertDialog.Builder(this);
+    		mAlert.setCancelable(true);
+
+    		mAlert.setTitle(Utils.notiTitle);
+    		mAlert.setMessage(Utils.notiMsg);
+    		
+    		mAlert.show();
+    	}
     }
