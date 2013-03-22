@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.yanniks.cm_updatechecker"
-    android:versionCode="8"
+    android:versionCode="9"
     android:versionName="@string/installedver" >
 
     <uses-sdk
@@ -19,6 +19,8 @@
     <uses-permission
         android:name="com.google.android.c2dm.permission.RECEIVE" />
 <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
 
@@ -51,6 +53,10 @@
         <data android:scheme="ace-updater" android:host="download" />
     </intent-filter> </activity>
     <activity android:name=".buildbotdb" />
+    <activity android:name=".flashupdate" />
+    <activity android:name=".easteregg" />
+    <activity android:name=".DownloadNew" android:label="@string/updmenu" />
+    <activity android:name=".delold" />
     <activity android:name=".ROMs" android:label="JellyBelly-HD" />
         <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
