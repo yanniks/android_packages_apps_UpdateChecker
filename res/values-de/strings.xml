@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="download">Aktuelle Version herunterladen</string>
     <string name="buildbotdb">Dropbox Ordner des Buildbots öffnen (evtl. mit Fehlern)</string>
     <string name="installed">Installierte Version: </string>
     <string name="current">Aktuelle Version: </string>
@@ -9,4 +8,10 @@
     <string name="ready">Neue Build online!</string>
     <string name="waittext">Sollte die Wartezeit länger als 10 Sekunden sein, prüfe bitte deine Netzwerkverbindung!</string>
     <string name="version">Fehler beim Auslesen der Build</string>
+    <string name="delold">Heruntergeladene Datei löschen</string>
+    <string name="downloadnew">Aktuelle Version laden (alte Datei vorher löschen!)</string>
+    <string name="flashfile">Geladene Version automatisch installieren</string>
+    <string name="updmenu">Updatemenü</string>
+    <string name="deleted">Gelöscht! :-)</string>
+    <string name="easter">Frohe Ostern! :-)</string>
 </resources>

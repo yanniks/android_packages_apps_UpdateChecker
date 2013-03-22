@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="download">Download current version</string>
     <string name="buildbotdb">Open Dropbox Buildbot folder (maybe with errors)</string>
     <string name="app_name">UpdateChecker</string>
-    <string name="installedver">1.0-8</string>
+    <string name="installedver">1.1</string>
     <string name="version">cannot read current build</string>
     <string name="installed">Installed version: </string>
     <string name="refresh">Refresh</string>
@@ -11,4 +10,11 @@
     <string name="wait">Please wait...</string>
     <string name="current">Current version: </string>
     <string name="ready">New build online!</string>
+    <string name="delold">Delete downloaded file</string>
+    <string name="downloadnew">Download new version (delete old version first!)</string>
+    <string name="flashfile">Flash downloaded version</string>
+    <string name="updmenu">Update menu</string>
+    <string name="deleted">Deleted! :-)</string>
+    <string name="easter">Happy easter! :-)</string>
+    <string name="nothing">nothing ;-)</string>
 </resources>

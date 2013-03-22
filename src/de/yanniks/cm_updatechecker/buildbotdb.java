@@ -11,8 +11,8 @@ public class buildbotdb extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.downloadcurrent);
-    	mWebView = (WebView) findViewById(R.id.downloadcurrent);
+        setContentView(R.layout.webview);
+    	mWebView = (WebView) findViewById(R.id.webview);
     	mWebView.loadUrl("http://yanniks.de/roms/cm-buildbot-ace");
     }
 }

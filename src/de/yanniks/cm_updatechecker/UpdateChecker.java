@@ -121,11 +121,14 @@ public class UpdateChecker extends Activity {
             } 
             tv.setText(exit); 
             } 
-    	public void downloadcurrent (final View view) {
-        	startActivity (new Intent (this,downloadcurrent.class));
-    	}
     	public void buildbotdb (final View view) {
         	startActivity (new Intent (this,buildbotdb.class));
+    	}
+    	public void downloadnew (final View view) {
+        	startActivity (new Intent (this,DownloadNew.class));
+    	}
+    	public void easteregg (final View view) {
+        	startActivity (new Intent (this,easteregg.class));
     	}
         private class LoginClient extends WebViewClient {
             @Override
