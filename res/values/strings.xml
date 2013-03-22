@@ -3,11 +3,12 @@
     <string name="download">Download current version</string>
     <string name="buildbotdb">Open Dropbox Buildbot folder (maybe with errors)</string>
     <string name="app_name">UpdateChecker</string>
-    <string name="installedver">1.0-6</string>
+    <string name="installedver">1.0-8</string>
     <string name="version">cannot read current build</string>
     <string name="installed">Installed version: </string>
     <string name="refresh">Refresh</string>
     <string name="waittext">If you\'re waiting longer than 10 seconds, please check your network connection!</string>
     <string name="wait">Please wait...</string>
     <string name="current">Current version: </string>
+    <string name="ready">New build online!</string>
 </resources>

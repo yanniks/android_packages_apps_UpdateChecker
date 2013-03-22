@@ -22,7 +22,7 @@ import android.net.Uri;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 
-import de.yanniks.cm_updatechecker.Utils;
+import de.yanniks.cm_updatechecker.CommonUtilities;
 import com.google.android.gcm.GCMRegistrar;
 import android.widget.TextView;
 
@@ -35,16 +35,15 @@ public class UpdateChecker extends Activity {
         setContentView(R.layout.updatecheck);
         GCMRegistrar.checkDevice(this);
 		GCMRegistrar.checkManifest(this);
-		
 		final String regId = GCMRegistrar.getRegistrationId(this);
 		
 		if (regId.equals("")) {
-			GCMRegistrar.register(this, Utils.GCMSenderId);
+			GCMRegistrar.register(this, CommonUtilities.SENDER_ID);
 		} else {
 			Log.v("", "Already registered:  "+regId);
 		}
         
-		if (Utils.notificationReceived) {
+		if (CommonUtilities.notificationReceived) {
 			onNotification();
 		}
         TextView tv = (TextView)findViewById(R.id.installedversion);
@@ -161,7 +160,7 @@ public class UpdateChecker extends Activity {
         }
         
         public void onNotification(){
-    		Utils.notificationReceived=false;
+    		CommonUtilities.notificationReceived=false;
     		PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
     		WakeLock  wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TAG");
     		wl.acquire();
@@ -170,8 +169,8 @@ public class UpdateChecker extends Activity {
     		AlertDialog.Builder mAlert=new AlertDialog.Builder(this);
     		mAlert.setCancelable(true);
 
-    		mAlert.setTitle(Utils.notiTitle);
-    		mAlert.setMessage(Utils.notiMsg);
+    		mAlert.setTitle(CommonUtilities.notiTitle);
+    		mAlert.setMessage(CommonUtilities.notiMsg);
     		
     		mAlert.show();
     	}
