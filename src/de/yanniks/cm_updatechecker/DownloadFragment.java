@@ -88,7 +88,7 @@ public class DownloadFragment extends SherlockFragment implements
   }
 
 private void startDownload(View v) {
-    Uri uri=Uri.parse("http://yanniks.de/roms/cm-10.1-ace.sha1");
+    Uri uri=Uri.parse("http://yanniks.de/roms/cm-10.1-ace");
 
     Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                .mkdirs();
