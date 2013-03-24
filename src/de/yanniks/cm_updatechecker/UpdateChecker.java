@@ -17,13 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.content.DialogInterface;
-import android.net.Uri;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
-
-import de.yanniks.cm_updatechecker.CommonUtilities;
-import com.google.android.gcm.GCMRegistrar;
 import android.widget.TextView;
 
 public class UpdateChecker extends Activity {
@@ -33,19 +26,6 @@ public class UpdateChecker extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.updatecheck);
-        GCMRegistrar.checkDevice(this);
-		GCMRegistrar.checkManifest(this);
-		final String regId = GCMRegistrar.getRegistrationId(this);
-		
-		if (regId.equals("")) {
-			GCMRegistrar.register(this, CommonUtilities.SENDER_ID);
-		} else {
-			Log.v("", "Already registered:  "+regId);
-		}
-        
-		if (CommonUtilities.notificationReceived) {
-			onNotification();
-		}
         TextView tv = (TextView)findViewById(R.id.installedversion);
     	mWebView = (WebView) findViewById(R.id.updatecheck);
     	mWebView.loadUrl("http://yanniks.de/roms/current-cm101ace.html");
@@ -130,6 +110,9 @@ public class UpdateChecker extends Activity {
     	public void easteregg (final View view) {
         	startActivity (new Intent (this,easteregg.class));
     	}
+    	public void cmchanges (final View view) {
+        	startActivity (new Intent (this,cmchanges.class));
+    	}
         private class LoginClient extends WebViewClient {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -154,27 +137,10 @@ public class UpdateChecker extends Activity {
             	startActivity (new Intent (this,ROMs.class));
             	return true;
             }
+            if(item.getItemId() == R.id.item3){
+            	startActivity (new Intent (this,RegisterActivity.class));
+            	return true;
+            }
             return super.onOptionsItemSelected(item);
         }
-        @Override
-        protected void onDestroy() {
-            GCMRegistrar.onDestroy(this);
-            super.onDestroy();
-        }
-        
-        public void onNotification(){
-    		CommonUtilities.notificationReceived=false;
-    		PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-    		WakeLock  wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TAG");
-    		wl.acquire();
-    		wl.release();
-
-    		AlertDialog.Builder mAlert=new AlertDialog.Builder(this);
-    		mAlert.setCancelable(true);
-
-    		mAlert.setTitle(CommonUtilities.notiTitle);
-    		mAlert.setMessage(CommonUtilities.notiMsg);
-    		
-    		mAlert.show();
-    	}
-    }
+}

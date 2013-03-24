@@ -14,8 +14,6 @@
 
 package de.yanniks.cm_updatechecker;
 
-import java.io.File;
-
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
