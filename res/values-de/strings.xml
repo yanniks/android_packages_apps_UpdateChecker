@@ -14,4 +14,19 @@
     <string name="updmenu">Updatemenü</string>
     <string name="deleted">Gelöscht! :-)</string>
     <string name="easter">Frohe Ostern! :-)</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="already_registered">Gerät bereits auf Server registriert.</string>
+    <string name="gcm_registered">Gerät erfolgreich reserviert!</string>
+    <string name="gcm_unregistered">device successfully unregistered!</string>
+    <string name="whyuser">Warum mein Nutzername?</string>
+    <string name="gcm_message">Nachricht!</string>
+    <string name="gcm_error">error (%1$s).</string>
+    <string name="gcm_recoverable_error">Fehler (%1$s).</string>
+    <string name="gcm_deleted">Server %1$d Nachrichten gelöscht!</string>
+    <string name="server_registering">Versuche Gerät zu registrieren (Versuch %1$d/%2$d).</string>
+    <string name="server_registered">Vom UpdateChecker Server: Gerät erfolgreich registriert!</string>
+    <string name="server_unregistered">Vom UpdateChecker Server: Gerät erfolgreich abgemeldet!</string>
+    <string name="server_register_error">Konnte nicht auf Server nach %1$d Versuchen registrieren.</string>
+    <string name="server_unregister_error">Konnte nicht auf Server registrieren: (%1$s)</string>
 </resources>
