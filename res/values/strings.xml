@@ -13,6 +13,7 @@
     <string name="delold">Delete downloaded file</string>
     <string name="downloadnew">Download new version (delete old version first!)</string>
     <string name="flashfile">Flash downloaded version</string>
+    <string name="explwhyuser">Of cause it\'\s not required to enter your username. But if you have got any \'\special needs\'\ e.g. the possibility to order special notifications you will have to fill in the gap. Otherwise I won\'\t have the possibility to identify your device and you won\'\t be able to use this services. Entering your username later is not possible but I can remove it for you if you wish. Of cause I won\'\t give your data to others. You will find more information on the HTC Desire HD CyanogenMod 10.1 thread on Android-Hilfe.de (german forum).</string>
     <string name="updmenu">Update menu</string>
     <string name="deleted">Deleted! :-)</string>
     <string name="easter">Happy easter! :-)</string>
@@ -24,6 +25,7 @@
     <string name="gcm_registered">device successfully registered!</string>
     <string name="gcm_unregistered">device successfully unregistered!</string>
     <string name="gcm_message">you got message!</string>
+    <string name="updated">current version updated!</string>
     <string name="whyuser">Why my username?</string>
     <string name="gcm_error">error (%1$s).</string>
     <string name="gcm_recoverable_error">recoverable error (%1$s).</string>

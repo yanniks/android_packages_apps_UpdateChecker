@@ -13,6 +13,7 @@
     <string name="flashfile">Geladene Version automatisch installieren</string>
     <string name="updmenu">Updatemenü</string>
     <string name="deleted">Gelöscht! :-)</string>
+    <string name="explwhyuser">Natürlich steht es dir frei, deinen Nutzernamen einzutragen. Falls du allerdings \'\Sonderwünsche\'\ hast, z.B. die Möglichkeit, bestimmte Benachrichtigungen zusätzlich zu bestellen, bzw. abzubestellen, dann musst du dieses Feld ausfüllen. So habe ich später die Möglichkeit, dein Gerät dir zuzuordnen und deine Push-Benachrichtigungen zu personalisieren. Ein nachträgliches Hinzufügen des Namens ist derzeit nicht möglich, das Entfernen allerdings schon. Natürlich werden deine Daten vertraulich behandelt und nicht weitergegeben. Weitere Informationen findest du im HTC Desire HD CyanogenMod 10.1 Thread auf Android-Hilfe.de .</string>
     <string name="easter">Frohe Ostern! :-)</string>
     <string name="menu_settings">Einstellungen</string>
     <string name="title_activity_main">Push Notifications</string>
@@ -21,6 +22,7 @@
     <string name="gcm_unregistered">device successfully unregistered!</string>
     <string name="whyuser">Warum mein Nutzername?</string>
     <string name="gcm_message">Nachricht!</string>
+    <string name="updated">Aktuelle Version aktualisert!</string>
     <string name="gcm_error">error (%1$s).</string>
     <string name="gcm_recoverable_error">Fehler (%1$s).</string>
     <string name="gcm_deleted">Server %1$d Nachrichten gelöscht!</string>

@@ -18,6 +18,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class UpdateChecker extends Activity {
     /** Called when the activity is first created. */
@@ -129,16 +130,17 @@ public class UpdateChecker extends Activity {
 
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
+            if(item.getItemId() == R.id.item3){
+            	startActivity (new Intent (this,RegisterActivity.class));
+            	return true;
+            }
             if(item.getItemId() == R.id.item1){
                 mWebView.reload();
+                Toast.makeText(UpdateChecker.this, getString(R.string.updated), Toast.LENGTH_LONG).show();
                 return true;
                 }
             if(item.getItemId() == R.id.item2){
             	startActivity (new Intent (this,ROMs.class));
-            	return true;
-            }
-            if(item.getItemId() == R.id.item3){
-            	startActivity (new Intent (this,RegisterActivity.class));
             	return true;
             }
             return super.onOptionsItemSelected(item);
