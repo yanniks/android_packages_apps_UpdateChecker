@@ -24,6 +24,7 @@
     <string name="gcm_registered">device successfully registered!</string>
     <string name="gcm_unregistered">device successfully unregistered!</string>
     <string name="gcm_message">you got message!</string>
+    <string name="updated">current version updated!</string>
     <string name="whyuser">Why my username?</string>
     <string name="gcm_error">error (%1$s).</string>
     <string name="gcm_recoverable_error">recoverable error (%1$s).</string>
