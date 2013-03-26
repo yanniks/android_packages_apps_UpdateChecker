@@ -17,7 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Natürlich steht es dir frei, deinen Nutzernamen einzutragen. Falls du allerdings 'Sonderwünsche' hast, z.B. die Möglichkeit, bestimmte Benachrichtigungen zusätzlich zu bestellen, bzw. abzubestellen, dann musst du dieses Feld ausfüllen. So habe ich später die Möglichkeit, dein Gerät dir zuzuordnen und deine Push-Benachrichtigungen zu personalisieren. Ein nachträgliches Hinzufügen des Namens ist derzeit nicht möglich, das Entfernen allerdings schon. Natürlich werden deine Daten vertraulich behandelt und nicht weitergegeben.
-Weitere Informationen findest du im HTC Desire HD CyanogenMod 10.1 Thread auf Android-Hilfe.de" />
+        android:text="@string/explwhyuser" />
 
 </LinearLayout>
