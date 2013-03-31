@@ -22,7 +22,7 @@
     <string name="gcm_unregistered">device successfully unregistered!</string>
     <string name="whyuser">Warum mein Nutzername?</string>
     <string name="gcm_message">Nachricht!</string>
-    <string name="updated">Aktuelle Version aktualisert!</string>
+    <string name="updated">Aktuelle Version aktualisiert!</string>
     <string name="gcm_error">error (%1$s).</string>
     <string name="gcm_recoverable_error">Fehler (%1$s).</string>
     <string name="gcm_deleted">Server %1$d Nachrichten gelöscht!</string>
