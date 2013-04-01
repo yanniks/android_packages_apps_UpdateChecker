@@ -15,6 +15,7 @@
 package de.yanniks.cm_updatechecker;
 
 import android.app.DownloadManager;
+import android.app.Fragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -28,9 +29,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import com.actionbarsherlock.app.SherlockFragment;
 
-public class DownloadFragment extends SherlockFragment implements
+public class DownloadFragment extends Fragment implements
     View.OnClickListener {
   private DownloadManager mgr=null;
   private long lastDownload=-1L;

@@ -18,11 +18,10 @@ import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-
-public class DownloadNew extends SherlockFragmentActivity {
+public class DownloadNew extends FragmentActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -32,8 +31,8 @@ public class DownloadNew extends SherlockFragmentActivity {
                                 .penaltyLog()
                                 .build());
     
-      if (getSupportFragmentManager().findFragmentById(android.R.id.content)==null) {
-        getSupportFragmentManager().beginTransaction()
+      if (getFragmentManager().findFragmentById(android.R.id.content)==null) {
+        getFragmentManager().beginTransaction()
                                    .add(android.R.id.content,
                                         new DownloadFragment()).commit();
       }
