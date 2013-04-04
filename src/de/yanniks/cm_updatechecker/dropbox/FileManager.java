@@ -14,20 +14,19 @@ import com.dropbox.client2.exception.DropboxException;
 import com.dropbox.client2.session.AppKeyPair;
 import com.dropbox.client2.session.Session;
 
-//DropBoxFileListConnector.getFileList();
-//
-//DropBoxFileListConnector.getFileState();
-//DropBoxFileListConnector.deleteLocalFile();
-
-
-class FileManager {
+/**
+ * Manage files from DropBox API
+ * @author naether
+ *
+ */
+public class FileManager {
 
 	
 	
 	// In the class declaration section:
 	private DropboxAPI<AndroidAuthSession> mDBApi;
 
-	public void DropBoxFileListConnector(Context context, String AppKey, String AppSecret) {
+	public FileManager(Context context, String AppKey, String AppSecret) {
 		// And later in some initialization function:
 		AppKeyPair appKeys = new AppKeyPair(AppKey, AppSecret);
 		AndroidAuthSession session = new AndroidAuthSession(appKeys, Session.AccessType.DROPBOX);
@@ -67,7 +66,13 @@ class FileManager {
 		return list;
 	}
 	
-	private FileState getFileState(String StringFilename) {
+	/**
+	 * Get the State of given file (local saved, remote saved, downloading)
+	 * 
+	 * @param StringFilename
+	 * @return
+	 */
+	public FileState getFileState(String StringFilename) {
 		File file = new File(Environment.DIRECTORY_DOWNLOADS + StringFilename);
 		if (!file.exists() && !file.isDirectory()) {
 			return FileState.REMOTE_SAVED;
