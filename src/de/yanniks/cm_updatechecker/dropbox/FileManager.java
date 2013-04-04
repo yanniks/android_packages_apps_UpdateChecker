@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
+import android.os.Environment;
 import android.util.Log;
 
 import com.dropbox.client2.DropboxAPI;
@@ -67,7 +68,7 @@ class FileManager {
 	}
 	
 	private FileState getFileState(String StringFilename) {
-		File file = new File("/scard/downloads/"+StringFilename);
+		File file = new File(Environment.DIRECTORY_DOWNLOADS + StringFilename);
 		if (!file.exists() && !file.isDirectory()) {
 			return FileState.REMOTE_SAVED;
 		}
@@ -88,7 +89,14 @@ class FileManager {
 		return true;
 	}
 		
+	/**
+	 * Delete the file on local sdcard 
+	 * 
+	 * @param filename
+	 * @return If deleted successful or not
+	 */
 	public boolean deleteLocalFile(String filename) {
-		return false;
+		File file = new File(Environment.DIRECTORY_DOWNLOADS + filename);
+		return file.delete();
 	}
 }
