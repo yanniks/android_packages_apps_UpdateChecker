@@ -36,4 +36,5 @@
     <string name="server_unregistered">From UpdateChecker Server: successfully removed device!</string>
     <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
     <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="list_cm_changes">CM-Changes</string>
 </resources>

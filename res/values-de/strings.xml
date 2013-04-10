@@ -32,4 +32,5 @@
     <string name="server_unregistered">Vom UpdateChecker Server: Gerät erfolgreich abgemeldet!</string>
     <string name="server_register_error">Konnte nicht auf Server nach %1$d Versuchen registrieren.</string>
     <string name="server_unregister_error">Konnte nicht auf Server registrieren: (%1$s)</string>
+    <string name="list_cm_changes">CyanogenMod-Changes</string>
 </resources>
