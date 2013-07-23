@@ -2,7 +2,7 @@
 <resources>
     <string name="buildbotdb">Open Copy Buildbot folder (maybe with errors)</string>
     <string name="app_name">UpdateChecker</string>
-    <string name="installedver">1.1-2</string>
+    <string name="installedver">1.1-3</string>
     <string name="version">cannot read current build</string>
     <string name="installed">Installed version: </string>
     <string name="refresh">Refresh</string>
