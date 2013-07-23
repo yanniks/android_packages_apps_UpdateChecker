@@ -1,147 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/UpdateCheckerList"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical" >
 
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/installed" />
+ 
+   <TextView
+       android:id="@+id/installedversion"
+       android:layout_width="fill_parent"
+       android:layout_height="60dp"
+       android:text="@string/version" />
 
-        <TableRow
-            android:id="@+id/tableRow1"
-            style="@style/UpdateCheckerListRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="downloadnew" >
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current" />
+    
+   <WebView
+       android:id="@+id/updatecheck"
+       android:layout_width="238dp"
+       android:layout_height="wrap_content" />
+   
+       <TextView android:id="@+id/rss" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
-            <ImageView
-                android:id="@+id/updatechecker_list_image_1"
-                style="@style/UpdateCheckerListImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_list_download" >
-            </ImageView>
+   <TextView
+       android:id="@+id/textView3"
+       android:layout_width="wrap_content"
+       android:layout_height="30dp"
+       android:text="" />
+   
+   
 
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-
-                <TableRow
-                    android:id="@+id/tableRow2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/updatechecker_list_title"
-                        style="@style/UpdateCheckerListTitleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/updmenu" />
-                </TableRow>
-
-                <TableRow
-                    android:id="@+id/tableRow2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/textView1"
-                        style="@style/UpdateCheckerListText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/installed"
-                        android:textSize="9sp" />
-
-                    <TextView
-                        android:id="@+id/installedversion"
-                        style="@style/UpdateCheckerListText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/version"
-                        android:textSize="9sp" />
-                </TableRow>
-
-                <TableRow
-                    android:id="@+id/tableRow3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        style="@style/UpdateCheckerListText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/current"
-                        android:textSize="9sp" />
-
-                    <WebView
-                        android:id="@+id/updatecheck"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp" />
-                </TableRow>
-            </TableLayout>
-        </TableRow>
-
-        <!-- row 2 -->
-
-        <View
-            style="@style/UpdateCheckerListLine"
-            android:layout_height="1dp" >
-        </View>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            style="@style/UpdateCheckerListRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="buildbotdb" >
-
-            <ImageView
-                android:id="@+id/updatechecker_list_image_2"
-                style="@style/UpdateCheckerListImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_list_update" >
-            </ImageView>
-
-            <TextView
-                android:id="@+id/updatechecker_list_title_2"
-                style="@style/UpdateCheckerListTitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/buildbotdb" />
-        </TableRow>
-
-        <!-- row 2 -->
-
-        <View
-            style="@style/UpdateCheckerListLine"
-            android:layout_height="1dp" >
-        </View>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            style="@style/UpdateCheckerListRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="cmchanges" >
-
-            <ImageView
-                android:id="@+id/updatechecker_list_image_3"
-                style="@style/UpdateCheckerListImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_list_cm_changelog" />
-
-            <TextView
-                android:id="@+id/updatechecker_list_title_3"
-                style="@style/UpdateCheckerListTitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/list_cm_changes" />
-        </TableRow>
-    </TableLayout>
-
+   <Button
+       android:id="@+id/button1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:onClick="downloadnew"
+       android:text="@string/updmenu" />
+   
+   <Button
+       android:id="@+id/button2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:onClick="buildbotdb"
+       android:text="@string/buildbotdb" />
+   
+   <Button
+       android:id="@+id/button3"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:onClick="cmchanges"
+       android:text="CM-Changes" />
+ 
 </LinearLayout>
