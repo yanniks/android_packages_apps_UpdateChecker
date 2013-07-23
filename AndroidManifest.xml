@@ -53,7 +53,6 @@
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="ace-updater" android:host="download" />
     </intent-filter> </activity>
-    <activity android:name=".buildbotdb" />
     <activity android:name=".flashupdate" />
     <activity android:name=".easteregg" />
     <activity android:name=".whyuser" />

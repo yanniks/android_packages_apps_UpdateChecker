@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import de.yanniks.cm_updatechecker.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -103,13 +103,11 @@ public class UpdateChecker extends Activity {
             tv.setText(exit); 
             } 
     	public void buildbotdb (final View view) {
-        	startActivity (new Intent (this,buildbotdb.class));
+    		 Intent facebookIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://yanniks.de/roms/cm-buildbot-ace")); 
+    		 startActivity(facebookIntent);
     	}
     	public void downloadnew (final View view) {
         	startActivity (new Intent (this,DownloadNew.class));
-    	}
-    	public void easteregg (final View view) {
-        	startActivity (new Intent (this,easteregg.class));
     	}
     	public void cmchanges (final View view) {
         	startActivity (new Intent (this,cmchanges.class));
