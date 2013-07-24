@@ -4,12 +4,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import android.app.Activity;
-<<<<<<< HEAD
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
-import android.content.Intent;
-=======
->>>>>>> parent of 38d3b00... updated flash system - requires new builds!
 import android.os.Bundle;
 
 public class flashupdate extends Activity {
